@@ -9,7 +9,7 @@ import datetime
 import json
 from influxdb import InfluxDBClient
 
-#sys.path.append('../Golf')
+sys.path.append('../pinpoint')
 import db  # db.py
 
 PPURL = "http://10.39.33.36:8079/"
