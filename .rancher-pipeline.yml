@@ -4,13 +4,13 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: harbor.enn.cn/devops/cmdb-django:${CICD_EXECUTION_SEQUENCE}
+      tag: harbor.enn.cn/devops/pinpoint2influxdb:${CICD_EXECUTION_SEQUENCE}
       pushRemote: true
       registry: harbor.enn.cn
 - name: 输出镜像名称
   steps:
   - runScriptConfig:
       image: python:latest
-      shellScript: 'echo "docker image: harbor.enn.cn/devops/cmdb-django:${CICD_EXECUTION_SEQUENCE}"'
+      shellScript: 'echo "docker image: harbor.enn.cn/devops/ponpoint2influxdb:${CICD_EXECUTION_SEQUENCE}"'
 timeout: 60
 notification: {}
